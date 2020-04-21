@@ -1,7 +1,4 @@
-*,body {
-	background-color: AliceBlue;
+body {
+	background-color: tomato;
 }
 
-.h1tebal {
-	font-weight: bold !important;
-}

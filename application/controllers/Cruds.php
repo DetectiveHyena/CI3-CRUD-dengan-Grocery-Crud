@@ -10,7 +10,6 @@ class Cruds extends CI_Controller {
 
 		$this->load->database();
 		$this->load->helper('url');
-
 		$this->load->library('grocery_CRUD');
 	}
 
@@ -22,4 +21,28 @@ class Cruds extends CI_Controller {
 		 $this->load->view('siswa/index');
 		 $this->load->view('siswa/footer');
 	}
+
+
+	/*public function indexs()
+	{
+		$this->_example_output((object)array('output' => '' , 'js_files' => array() , 'css_files' => array()));
+	}
+*/
+	public function siswa()
+	{
+		$crud = new grocery_CRUD();
+		$crud->set_theme('bootstrap');
+		$crud->set_table('siswa');
+		$output = $this->grocery_crud->render();
+
+		$this->_example_output($output);
+		//$this->load->view('siswas',$output);
+	}
+
+	public function _example_output($output = null)
+	{
+		$this->load->view('siswas',(array)$output);
+	}
+
+
 }
