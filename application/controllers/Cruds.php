@@ -15,7 +15,7 @@ class Cruds extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Halaman Tampil Semua Siswa';
+		$data['title'] = 'Contoh CRUD dengan GROCERY CRUD';
 
  		 $this->load->view('siswa/header',$data);
 		 $this->load->view('siswa/index');
